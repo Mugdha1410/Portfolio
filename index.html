@@ -1,0 +1,428 @@
+<Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width,initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+</head>
+<body>
+   <header class="header">
+        <a href="#" class="logo">Mugdha W.</a>
+        <div class="navbar">
+            <a href="#home">Home</a>
+            <a href="#About" onclick="myFunction1()">Achievements</a>
+            <a href="#services" onclick="myFunction2()">Certificates</a>
+            <a href="#skils">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
+    <section id="home" class="home">
+        <div class="home-content">
+            <h1 style="font-size: 4rem;"> Hi! I'm Mugdha</h1>
+            <h3>And I'm a <span style="color: cyan;">Mechanical Engg. student at MITAOE</span></h3>
+ 
+            <p style="margin-top: 1rem;">
+                A Digital World Enthusiast passionate about technology's potential. Proficient in Python, C Programming, Tableau and Linux, I thrive on problem-solving and innovation. Let's connect and explore the endless possibilities of technology together!
+            </p>
+                
+            <div class="home-sci">
+                <a href="www.linkedin.com/in/mugdha-wakodkar-ab2245360" style="--i:7" target="_blank">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+                <a href="https://www.instagram.com/mugdhaa__14/" style="--i:8" target="_blank">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+                <a href="https://github.com/Mugdha1410" style="--i:10" target="_blank">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="mailto:themugdha14@gmail.com" style="--i:11" target="_blank">
+                    <i class='bx bxl-gmail'></i>
+                </a>
+            </div>
+            
+        </div>
+        <div class="circle">
+            <img src="./images/Mugdha.jpg" alt="Mugdha"> 
+        </div>
+    </div>
+    </section>
+
+    <section>
+        <div class="experience-container" id="acv">
+            <h3 style="margin-left: 1.5em; margin-bottom: 1em;">Achievements</h3>
+            <h1 style="margin-left: .6em; margin-bottom: 1em;"></h1>
+            <div class="work-container">
+                <div class="con">
+                    <div class="exp-num">01</div>
+                    <h3><span style="color: #3CC74E;">Proud Member</span> of Aero Club</h3>
+                    <div><p>a core member at Aero Club at MITAOE and Participated in competitions like techfest and SAEISSDDC.</p></div>
+                </div>
+               
+                <div class="con">
+                    <div class="exp-num">02</div>
+                    <h3><span style="color: #E95D;">Coming Soon... </span><span style="color: black;">iadov </span></h3>
+                    <div><p>Looking Forqward to achieve even bigger things....</p></div>
+                </div>
+            </div>
+        </div>
+    </section>  
+
+    <section>
+        <div class="certificate" id="cert">
+            <h1>Certificates</h1>
+            <div class="certificate-container">
+                <div class="cert-item">
+                    <h3>SAE Certificate 1</h3>
+                    <p>Received certificate for participation in SAE competition.</p>
+                    <button onclick="displayCertificate('./images/SAE 1.jpg')" class="cert-btn">Display Certificate</button>
+                </div>
+                <div class="cert-item">
+                    <h3>SAE Certificate 2</h3>
+                    <p>Received certificate for participation in SAE competition.</p>
+                    <button onclick="displayCertificate('./images/SAE2.jpg')" class="cert-btn">Display Certificate</button>
+                </div>
+                <div class="cert-item">
+                    <h3>IYMC Certificate</h3>
+                    <p>Received certificate for participation in International Youth Math Challenge.</p>
+                    <button onclick="displayCertificate('./images/IYMC.jpg')" class="cert-btn">Display Certificate</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Modal -->
+    <div id="certificateModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="certificateImage">
+    </div>
+
+    <style>
+        .certificate-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            margin: 2rem;
+        }
+        .cert-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 300px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .cert-item:hover {
+            transform: translateY(-5px);
+        }
+        .cert-item h3 {
+            color: #3CC74E;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .cert-item p {
+            color: #fff;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+        .cert-btn {
+            background-color: #3CC74E;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .cert-btn:hover {
+            background-color: #2da73d;
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80vh;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+        .close {
+            position: absolute;
+            right: 35px;
+            top: 15px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close:hover {
+            color: #3CC74E;
+        }
+    </style>
+
+    <script>
+        function displayCertificate(imagePath) {
+            const modal = document.getElementById('certificateModal');
+            const modalImg = document.getElementById('certificateImage');
+            modal.style.display = "block";
+            modalImg.src = imagePath;
+        }
+
+        function closeModal() {
+            document.getElementById('certificateModal').style.display = "none";
+        }
+
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            const modal = document.getElementById('certificateModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <section id="skils" class="skils">
+        <div class="skils-main">
+            <div class="skils-left">
+                <h1>Technical Skills</h1>
+                <div class="skils-bar">
+                    <div class="info">
+                        <p>HTML</p>
+                        <p>80%</p>
+                    </div>
+                    <div class="bar">
+                        <span class="html"></span>
+                    </div>
+                </div>
+
+            
+                    <div class="skils-bar">
+                        <div class="info">
+                            <p>JAVASCRIPT</p>
+                            <p>50%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="javascript"></span>
+                        </div>
+                    </div>
+                        <div class="skils-bar">
+                        <div class="info">
+                                <p>CSS</p>
+                                <p>40%</p>
+                            </div>
+                            <div class="bar">
+                                <span class="css"></span>
+                            </div>
+                        </div>
+                        <div class="skils-bar">
+                            <div class="info">
+                                    <p>PYTHON</p>
+                                    <p>80%</p>
+                                </div>
+                                <div class="bar">
+                                    <span class="python"></span>
+                                </div>
+                            </div>
+            </div>
+            <div class="skills-right">
+                <h1 class="skills-title">Professional Skills</h1>
+                <div class="skills-container">
+                    <div class="skill-box">
+                        <i class='bx bxs-bulb'></i>
+                        <h3>Creativity</h3>
+                        <div class="skill-progress">
+                            <div class="progress-bar" style="width: 90%"></div>
+                        </div>
+                        <p>90%</p>
+                    </div>
+                    <div class="skill-box">
+                        <i class='bx bxs-message-dots'></i>
+                        <h3>Communication</h3>
+                        <div class="skill-progress">
+                            <div class="progress-bar" style="width: 80%"></div>
+                        </div>
+                        <p>80%</p>
+                    </div>
+                    <div class="skill-box">
+                        <i class='bx bxs-brain'></i>
+                        <h3>Problem Solving</h3>
+                        <div class="skill-progress">
+                            <div class="progress-bar" style="width: 70%"></div>
+                        </div>
+                        <p>70%</p>
+                    </div>
+                    <div class="skill-box">
+                        <i class='bx bxs-group'></i>
+                        <h3>Team Work</h3>
+                        <div class="skill-progress">
+                            <div class="progress-bar" style="width: 90%"></div>
+                        </div>
+                        <p>90%</p>
+                    </div>
+                </div>
+                <h1 class="software-title">Designing Softwares</h1>
+                <div class="software-container">
+                    <div class="software-box">
+                        <i class='bx bxs-palette'></i>
+                        <h3>Fusion 360</h3>
+                        <p>3D Modeling & Design</p>
+                    </div>
+                    <div class="software-box">
+                        <i class='bx bxs-pencil'></i>
+                        <h3>AutoCAD</h3>
+                        <p>2D Drafting & Design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <form onsubmit="showAlert()">
+            <input type="text" id="name" placeholder="Mugdha Wakodkar" required>
+            <input type="email" id="email" placeholder="mugdhawakodkar1@gmail.com" required>
+            <input type="number" id="phone" placeholder="9511233022" required>
+            <input type="text" id="subject" placeholder="Creative Technology"required>
+            <textarea id="message" rows="4" placeholder="Your Message"></textarea>
+            <div class="contact-form formBtn"> 
+            <button type="submit" class="send">Send Message</button>
+            </div>
+        </form>
+        </section>
+        
+<footer style="
+display: flex;
+align-items: center;
+justify-content: center;
+">
+    <div class="home-sci">
+    <h1>Contact Me</h1>
+    <a href="https://www.linkedin.com/in/mugdha-wakodkar-801213362?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" style="--i:7" target="_blank">
+        <i class='bx bxl-linkedin'></i>
+    </a>
+    <a href="https://www.instagram.com/mugdhaa__14/" style="--i:8" target="_blank">
+        <i class='bx bxl-instagram'></i>
+    </a>
+    <a href="https://github.com/Mugdha1410" style="--i:10" target="_blank">
+        <i class='bx bxl-github'></i>
+    </a>
+    <a href="mailto:themugdha14@gmail.com" style="--i:11" target="_blank">
+        <i class='bx bxl-gmail'></i>
+    </a>   
+</footer>
+
+<script src="main.js"></script> 
+<script>
+function myFunction1() {
+    const element = document.getElementById("acv");
+    element.scrollIntoView({behavior:"smooth"});
+};
+function myFunction2() {
+    const element = document.getElementById("cert");
+    element.scrollIntoView({behavior:"smooth"});
+};
+</script>   
+
+<style>
+    .skills-title, .software-title {
+        color: #fff;
+        margin-bottom: 2rem;
+        text-align: center;
+        font-size: 2rem;
+    }
+    .software-title {
+        margin-top: 3rem;
+    }
+    .skills-container, .software-container {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
+        margin: 0 auto;
+        max-width: 800px;
+    }
+    .skill-box, .software-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s ease;
+        width: 250px;
+    }
+    .skill-box:hover, .software-box:hover {
+        transform: translateY(-5px);
+    }
+    .skill-box i, .software-box i {
+        font-size: 3rem;
+        color: #3CC74E;
+        margin-bottom: 1.5rem;
+    }
+    .skill-box h3, .software-box h3 {
+        color: #fff;
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+        text-align: center;
+    }
+    .skill-box p, .software-box p {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.4;
+    }
+    .skill-progress {
+        width: 100%;
+        height: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        margin: 1rem 0;
+        overflow: hidden;
+    }
+    .progress-bar {
+        height: 100%;
+        background: #3CC74E;
+        border-radius: 4px;
+        transition: width 0.3s ease;
+    }
+</style>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
